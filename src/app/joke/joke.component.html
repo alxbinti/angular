@@ -1,0 +1,14 @@
+<body><h1> aci vin jokes</h1>
+    <div>
+        <input [(ngModel)]="jokeNo">
+        <button (click)="getJokes()">Show Jokes</button>
+        <button (click)="deleteJokes()">Delete Jokes</button>
+        <p> {{ jokeNo }} from parent</p>
+    </div>
+    <div>
+        <app-child [jokeNoChild]="jokeNo"></app-child>
+        <div *ngFor="let joke of jokeList">
+            <p>{{joke.joke}}</p>
+          </div>
+    </div>
+</body>
